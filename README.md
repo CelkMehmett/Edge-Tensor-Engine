@@ -1,4 +1,33 @@
-# Edge Tensor Engine
+# Edge Tensor Engine 🚀
+
+> **High-Performance, Custom Tensor Engine for Edge AI (Rust + Dart FFI)**
+
+[![Rust](https://img.shields.io/badge/rust-v1.75+-orange.svg)](https://www.rust-lang.org/)
+[![Dart](https://img.shields.io/badge/dart-v3.0+-blue.svg)](https://dart.dev/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+Edge Tensor Engine is a lightweight, bare-metal tensor computation library designed from scratch for running **LLMs and Transformers** on edge devices with strict memory constraints (<2GB RAM).
+
+## 📊 Performance Benchmarks
+
+![Performance Benchmarks](performance_benchmark.png)
+
+| Matrix Size | Time (avg) | GFLOPS | Throughput |
+|------------|-----------|--------|------------|
+| **64×64** | 121 µs | **4.33** | Excellent |
+| **128×128** | 2.23 ms | 1.88 | Good |
+| **256×256** | 25.93 ms | 1.29 | Moderate |
+| **512×512** | 296 ms | 0.91 | Baseline |
+
+> **Note:** Current implementation is single-threaded F32. SIMD optimization path is laid out below.
+
+## 🚀 Optimization Roadmap
+
+![Optimization Roadmap](optimization_roadmap.png)
+
+We have a clear path to achieve **~30ms** inference for 512×512 matrices using AVX2/NEON SIMD kernels and Multi-threading.
+
+---
 
 A high-performance Tensor and Autograd engine written in Rust, optimized for edge inference (ARM NEON / x86 AVX2). Designed for integration with Dart/Flutter via FFI.
 

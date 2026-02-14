@@ -1,0 +1,66 @@
+   Compiling edge_tensor_engine v0.1.0 (/home/mehmetcelik/Masaüstü/masaüstü/ML entegre/ml_dart/EDGE TENSOR ENGINE)
+    Finished `bench` profile [optimized] target(s) in 0.89s
+     Running benches/matmul_bench.rs (target/release/deps/matmul_bench-116d21e71c124e02)
+Gnuplot not found, using plotters backend
+Benchmarking matmul/F32/64x64x64
+Benchmarking matmul/F32/64x64x64: Warming up for 3.0000 s
+Benchmarking matmul/F32/64x64x64: Collecting 100 samples in estimated 5.1625 s (45k iterations)
+Benchmarking matmul/F32/64x64x64: Analyzing
+matmul/F32/64x64x64     time:   [117.20 µs 121.03 µs 125.72 µs]
+Found 14 outliers among 100 measurements (14.00%)
+  14 (14.00%) high severe
+Benchmarking matmul/F32/128x128x128
+Benchmarking matmul/F32/128x128x128: Warming up for 3.0000 s
+Benchmarking matmul/F32/128x128x128: Collecting 100 samples in estimated 5.0941 s (2000 iterations)
+Benchmarking matmul/F32/128x128x128: Analyzing
+matmul/F32/128x128x128  time:   [2.1464 ms 2.2347 ms 2.3567 ms]
+Found 14 outliers among 100 measurements (14.00%)
+  3 (3.00%) high mild
+  11 (11.00%) high severe
+Benchmarking matmul/F32/256x256x256
+Benchmarking matmul/F32/256x256x256: Warming up for 3.0000 s
+Benchmarking matmul/F32/256x256x256: Collecting 100 samples in estimated 5.4917 s (200 iterations)
+Benchmarking matmul/F32/256x256x256: Analyzing
+matmul/F32/256x256x256  time:   [24.679 ms 25.926 ms 27.434 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  2 (2.00%) high mild
+  9 (9.00%) high severe
+Benchmarking matmul/F32/512x512x512
+Benchmarking matmul/F32/512x512x512: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 29.4s, or reduce sample count to 10.
+Benchmarking matmul/F32/512x512x512: Collecting 100 samples in estimated 29.387 s (100 iterations)
+Benchmarking matmul/F32/512x512x512: Analyzing
+matmul/F32/512x512x512  time:   [288.64 ms 296.10 ms 305.14 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking tensor_creation/zeros_1024x1024
+Benchmarking tensor_creation/zeros_1024x1024: Warming up for 3.0000 s
+Benchmarking tensor_creation/zeros_1024x1024: Collecting 100 samples in estimated 5.1904 s (86k iterations)
+Benchmarking tensor_creation/zeros_1024x1024: Analyzing
+tensor_creation/zeros_1024x1024
+                        time:   [51.895 µs 53.762 µs 55.720 µs]
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking tensor_creation/ones_1024x1024
+Benchmarking tensor_creation/ones_1024x1024: Warming up for 3.0000 s
+Benchmarking tensor_creation/ones_1024x1024: Collecting 100 samples in estimated 5.0503 s (35k iterations)
+Benchmarking tensor_creation/ones_1024x1024: Analyzing
+tensor_creation/ones_1024x1024
+                        time:   [136.20 µs 142.37 µs 149.14 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+
+Benchmarking binary_ops/add_1024x1024
+Benchmarking binary_ops/add_1024x1024: Warming up for 3.0000 s
+Benchmarking binary_ops/add_1024x1024: Collecting 100 samples in estimated 5.9391 s (30k iterations)
+Benchmarking binary_ops/add_1024x1024: Analyzing
+binary_ops/add_1024x1024
+                        time:   [164.97 µs 174.14 µs 184.61 µs]
+Found 8 outliers among 100 measurements (8.00%)
+  3 (3.00%) high mild
+  5 (5.00%) high severe
+

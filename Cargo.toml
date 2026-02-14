@@ -25,3 +25,7 @@ criterion = "0.5"
 default = ["avx2", "neon"]
 avx2 = []
 neon = []
+
+[[bench]]
+name = "matmul_bench"
+harness = false

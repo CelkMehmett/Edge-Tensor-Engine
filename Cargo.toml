@@ -1,0 +1,27 @@
+[package]
+name = "edge_tensor_engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Antigravity"]
+description = "High-performance Tensor + Autograd engine for Edge AI"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+libc = "0.2"
+thiserror = "1.0"
+rand = "0.8"
+half = { version = "2.3", features = ["num-traits", "bytemuck"] }
+bytemuck = { version = "1.14", features = ["derive", "extern_crate_alloc"] }
+rayon = "1.8"
+num-traits = "0.2"
+paste = "1.0" # For macro generation
+
+[dev-dependencies]
+criterion = "0.5"
+
+[features]
+default = ["avx2", "neon"]
+avx2 = []
+neon = []
